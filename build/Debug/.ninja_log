@@ -3,7 +3,7 @@
 109	2684	7579535778034836	CMakeFiles/uart_test.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj	cb884398ece64521
 80	2625	7579535777253781	CMakeFiles/uart_test.dir/Src/stm32l4xx_it.c.obj	76588c255c6b56f0
 7713	10280	7579535854748521	CMakeFiles/uart_test.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj	220194954c9491b1
-72	2484	7579535775872675	CMakeFiles/uart_test.dir/Src/main.c.obj	d7c8b56b0ab1197b
+16	1042	7579566797783120	CMakeFiles/uart_test.dir/Src/main.c.obj	d7c8b56b0ab1197b
 8479	9295	7579522638836804	CMakeFiles/uart_test.dir/startup_stm32l432xx.s.obj	338dcc9c72ea07ba
 87	2570	7579535776185125	CMakeFiles/uart_test.dir/Src/stm32l4xx_hal_msp.c.obj	bec442b7d8cf45c2
 7482	10572	7579535858509751	CMakeFiles/uart_test.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj	a25c0dba60b5a9ff
@@ -25,5 +25,5 @@
 7644	9197	7579522637899543	CMakeFiles/uart_test.dir/Src/sysmem.c.obj	a721c491d0fe9cd
 7464	10028	7579535851413196	CMakeFiles/uart_test.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_exti.c.obj	cac6239f783bf84d
 8326	9898	7579522645304996	CMakeFiles/uart_test.dir/Src/syscalls.c.obj	28ffdd1c5c212519
-10573	11082	7579535863316946	uart_test.elf	7a0bab2390cc4e70
-23	937	7579542103476214	build.ninja	654dfbe3211bd27a
+1044	1571	7579566802912948	uart_test.elf	7a0bab2390cc4e70
+23	937	7579567521158722	build.ninja	654dfbe3211bd27a
