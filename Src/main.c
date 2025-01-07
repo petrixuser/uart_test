@@ -78,9 +78,12 @@ int __io_putchar(int ch)
 volatile uint32_t counter;
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+  static uint32_t last_counter;
   HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
-  printf("counter: %ld\n", counter);
-  counter = 0;
+  printf("counter: %ld\n", counter - last_counter);
+  last_counter = counter;
+  //HAL_UART_Transmit(&huart2, (uint8_t*)"Moege dein WLAN immer stark sein. Frohes neues Jahr!\n", 54, HAL_MAX_DELAY);
+  
 }
 /* USER CODE END ...*/
 
