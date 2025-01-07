@@ -63,13 +63,24 @@ static void MX_TIM7_Init(void);
 /* USER CODE END 0 */
 
 /* USER CODE BEGIN ... */
-
+int __io_putchar(int ch)
+{
+  // Wait until transmit data register is empty
+  while (!(USART2->ISR & USART_ISR_TXE)) {}
+  // Transmit character
+  USART2->TDR = (uint8_t)ch;
+  return ch;
+}
 /* USER CODE END ...*/
 
 
 /* USER CODE BEGIN ... */
+volatile uint32_t counter;
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
   HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+  printf("counter: %ld\n", counter);
+  counter = 0;
 }
 /* USER CODE END ...*/
 
@@ -105,7 +116,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
-  
+  printf("hello, world\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,6 +124,7 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim7);
   while (1)
   {
+     counter++;
     /* USER CODE END WHILE */
     
     /* USER CODE BEGIN 3 */
